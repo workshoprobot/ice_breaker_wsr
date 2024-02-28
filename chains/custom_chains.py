@@ -7,7 +7,6 @@ from output_parsers import summary_parser, ice_breaker_parser, topics_of_interes
 llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
 llm_creative = ChatOpenAI(temperature=1, model_name="gpt-3.5-turbo")
 
-
 def get_summary_chain() -> LLMChain:
     summary_template = """
          given the information about a person from linkedin {information}, and twitter posts {twitter_posts} I want you to create:

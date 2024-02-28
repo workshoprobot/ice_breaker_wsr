@@ -1,7 +1,3 @@
-from dotenv import load_dotenv
-
-load_dotenv()
-
 from langchain.agents import (
     create_react_agent,
     AgentExecutor,

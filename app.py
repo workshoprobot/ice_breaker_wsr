@@ -1,6 +1,3 @@
-from dotenv import load_dotenv
-
-load_dotenv()
 from flask import Flask, render_template, request, jsonify
 from ice_breaker import ice_break_with
 
@@ -29,7 +26,5 @@ def process():
 
 
 if __name__ == "__main__":
-    from dotenv import load_dotenv
 
-    load_dotenv()
     app.run(host="0.0.0.0", debug=True)

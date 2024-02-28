@@ -1,14 +1,10 @@
-from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
-
-load_dotenv()
 from langchain import hub
 from langchain.agents import create_react_agent, AgentExecutor
 from langchain_core.tools import Tool
 from langchain_openai import ChatOpenAI
 
 from tools.tools import get_profile_url
-
 
 def lookup(name: str) -> str:
     llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")

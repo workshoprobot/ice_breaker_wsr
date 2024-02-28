@@ -13,7 +13,6 @@ twitter_client = tweepy.Client(
     access_token_secret=os.environ["TWITTER_ACCESS_TOKEN_SECRET"],
 )
 
-
 def scrape_user_tweets(username, num_tweets=5):
     """
     Scrapes a Twitter user's original tweets (i.e., not retweets or replies) and returns them as a list of dictionaries.
@@ -32,7 +31,6 @@ def scrape_user_tweets(username, num_tweets=5):
         tweet_list.append(tweet_dict)
 
     return tweet_list
-
 
 if __name__ == "__main__":
     print(scrape_user_tweets(username="hwchase17"))
